@@ -2,3 +2,8 @@
 
 ![thehackermark](https://github.com/erossiano/thehackermark/blob/main/thm.jpg)
 
+
+
+# AUTORES
+
+@erossiano - Edward Rossiano
