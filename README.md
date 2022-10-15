@@ -12,10 +12,15 @@ información que soporte la gestión de una tienda de contenidos digitales
 y libros de programación, denominada TheHackerMark, de manera que se puedan
 mejorar sus procesos.
 
+Para que puedan desarrollar el proyecto que se te planteó, la aplicación web 
+debe contar con los siguientes módulos:
+
 
 
 # AUTORES
 @erossiano - Edward Rossiano
+
 @dahmon - Danilo Hernández
+
 @ivcifu - Iván Camilo Cifuentes Linares
 
