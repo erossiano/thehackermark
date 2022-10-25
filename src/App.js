@@ -1,10 +1,14 @@
-import React, {useEffect, useState}  from 'react';
-import logo from './logo.svg';
+import React from 'react';
+//import logo from './logo.svg';
 import './App.css';
 
-import Login from './components/Login.js';
+import ProductListTable from './components/Product/ProductListTable';
+import products from './data/products';
 
 function App() {
+
+//console.log(products[1].id);
+
   return ( 
     <>
       <div className='header'>
@@ -14,7 +18,8 @@ function App() {
       
       <div className='flex container'>
         {/* <img src={logo} className="App-logo" alt="logo" />  */}
-        <Login />
+        <ProductListTable data={products} />
+
       </div>
       </div>
 </>

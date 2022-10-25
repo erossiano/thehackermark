@@ -1,0 +1,15 @@
+.product {
+    width:100%;
+    border:1px solid #C0C0C0;
+    border-collapse:collapse;
+    padding:5px;
+}
+.product th {
+    border:1px solid #C0C0C0;
+    padding:5px;
+    background:#F0F0F0;
+}
+.product td {
+    border:1px solid #C0C0C0;
+    padding:5px;
+}
