@@ -2,8 +2,17 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 
-import ProductListTable from './components/Product/ProductListTable';
-import products from './data/products';
+
+import {
+BrowserRouter,
+// eslint-disable-next-line
+routes,
+Route,
+Routes
+} from 'react-router-dom';
+
+import Home from './pages/home';
+import Login from './pages/login';
 
 function App() {
 
@@ -11,17 +20,13 @@ function App() {
 
   return ( 
     <>
-      <div className='header'>
-      <span>Hola mundo!</span>
-      </div>
-      <div className='content'>
-      
-      <div className='flex container'>
-        {/* <img src={logo} className="App-logo" alt="logo" />  */}
-        <ProductListTable data={products} />
+    <BrowserRouter>
+        <Routes>
+              <Route index element={< Home /> } />
+              <Route path='/login' element={< Login /> } />
+        </Routes>
+    </BrowserRouter>
 
-      </div>
-      </div>
 </>
   );
   /*return (
