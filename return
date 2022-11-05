@@ -1,0 +1,195 @@
+[33mcommit 74049ba9374556b6a7b8eaa8ae559428302c92a1[m[33m ([m[1;36mHEAD -> [m[1;32mdevelopment-ivcifu[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: b631c6f ed8a369
+Author: Edward Rossiano <edwardrossiano@gmail.com>
+Date:   Wed Oct 19 14:19:30 2022 -0500
+
+    Merge remote-tracking branch 'origin/development-erossiano'
+
+[33mcommit b631c6fb515ad512b345258449ce1bfbe1e9f19c[m
+Author: Edward Rossiano <edwardrossiano@gmail.com>
+Date:   Wed Oct 19 14:16:04 2022 -0500
+
+    React App
+
+[33mcommit ed8a369f56ca406dce86ea37318e044228d7b76d[m
+Merge: e41e436 068b29e
+Author: erosiano <edwardrossiano@gmail.com>
+Date:   Sat Oct 15 15:39:22 2022 -0500
+
+    copiando el main
+
+[33mcommit 068b29e3e8f563e65024bbe78c1f56b07bcc67e5[m[33m ([m[1;31morigin/development-mceamy2[m[33m)[m
+Merge: c24aa71 785027a
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Sat Oct 15 11:13:08 2022 -0500
+
+    Merge pull request #10 from erossiano/difegus-patch-1
+    
+    Add files via upload
+
+[33mcommit 785027aa25db577beeb0cf8508fa751e594200a8[m[33m ([m[1;31morigin/difegus-patch-1[m[33m)[m
+Author: difegus <111029634+difegus@users.noreply.github.com>
+Date:   Sat Oct 15 11:07:53 2022 -0500
+
+    Add files via upload
+
+[33mcommit c24aa71e5ec18cce8f4c68c2d09ce7ca5d012eae[m
+Merge: 332b18e b016adb
+Author: erosiano <edwardrossiano@gmail.com>
+Date:   Sat Oct 15 11:07:21 2022 -0500
+
+    Merge branch 'main' of https://github.com/erossiano/thehackermark
+
+[33mcommit 332b18e551114427bc4bc1ad9a3558d0b2b3cd21[m
+Author: Amy Montenegro <mceamy@MacBook-Air-de-Amy.local>
+Date:   Fri Oct 14 23:59:12 2022 -0500
+
+    Agregue modulo de inventario
+
+[33mcommit b016adb4b51b3c746dff86c448a0b26c01b0db95[m
+Author: difegus <111029634+difegus@users.noreply.github.com>
+Date:   Sat Oct 15 09:45:40 2022 -0500
+
+    Add files via upload
+    
+    Adicion de modulo de ventas
+
+[33mcommit 4b93a7a40e15da09c44e531486c15376efe67018[m
+Author: Amy Montenegro <mceamy@MacBook-Air-de-Amy.local>
+Date:   Fri Oct 14 23:59:12 2022 -0500
+
+    Agregue modulo de inventario
+
+[33mcommit 20a997089fd160ae8b7e3f31a817f9fdf159129e[m
+Merge: 4d48a4e 48939ea
+Author: DaniloHernández <111465074+DaniloHernandezM@users.noreply.github.com>
+Date:   Fri Oct 14 20:32:22 2022 -0500
+
+    Merge pull request #8 from erossiano/development-ivcifu
+    
+    Aporte 3 Sprint 1 Iván Cifuentes
+
+[33mcommit 48939ea0bd153df633ac457224550fcfb4aeca9e[m[33m ([m[1;31morigin/development-ivcifu[m[33m)[m
+Author: Iván Cifuentes <ivancifuentes1995@gmail.com>
+Date:   Fri Oct 14 20:13:50 2022 -0500
+
+    Aporte 3 Sprint 1 Iván Cifuentes
+
+[33mcommit 4d48a4edd6a243e4237a3451f91c045f799d22b9[m
+Merge: 00f0af8 efcccb8
+Author: DaniloHernández <111465074+DaniloHernandezM@users.noreply.github.com>
+Date:   Fri Oct 14 14:01:23 2022 -0500
+
+    Merge pull request #6 from erossiano/development-ivcifu
+    
+    Development-ivcifu
+
+[33mcommit efcccb8952ed2fd77c7cdff4dbe927ddedca87ea[m
+Merge: 320202e 00f0af8
+Author: DaniloHernández <111465074+DaniloHernandezM@users.noreply.github.com>
+Date:   Fri Oct 14 14:01:12 2022 -0500
+
+    Merge branch 'main' into development-ivcifu
+
+[33mcommit 00f0af82ddfff577172b454a5d8feafdf3a5ea56[m
+Merge: ad5aab7 640bb9f
+Author: DaniloHernández <111465074+DaniloHernandezM@users.noreply.github.com>
+Date:   Fri Oct 14 14:00:15 2022 -0500
+
+    Merge pull request #7 from DaniloHernandezM/development-danilohernandezm
+    
+    Autor#2 @dahmon-Danilo Hernández. Creación primer párrafo de la descr…
+
+[33mcommit 640bb9f374e2be20d04fadca61331939ceecab94[m
+Merge: 67e652d ad5aab7
+Author: DaniloHernández <111465074+DaniloHernandezM@users.noreply.github.com>
+Date:   Fri Oct 14 13:58:53 2022 -0500
+
+    Merge branch 'main' into development-danilohernandezm
+
+[33mcommit e41e436651cd1206b44d2a5cf5140724719e5eea[m
+Author: Edward Rossiano <edwardrossiano@gmail.com>
+Date:   Fri Oct 14 13:29:21 2022 -0500
+
+    Add main ignore file
+
+[33mcommit 67e652ddea8a2f82b674c94e09e36ac3eea67ad1[m
+Author: Danilo Hernandez <dahmon800@gmail.com>
+Date:   Fri Oct 14 01:01:10 2022 -0500
+
+    Autor#2 @dahmon-Danilo Hernández. Creación primer párrafo de la descripción del proyecto
+
+[33mcommit 320202e3022a708e07bfd510a7efeff50260966c[m
+Author: Iván Cifuentes <ivancifuentes1995@gmail.com>
+Date:   Thu Oct 13 22:41:19 2022 -0500
+
+    Aporte 2 Sprint 1 Iván Camilo Cifuentes
+
+[33mcommit d2b488afbb803a928b7abbb6d3eaa636fb26f55d[m
+Author: Iván Cifuentes <ivancifuentes1995@gmail.com>
+Date:   Thu Oct 13 22:35:02 2022 -0500
+
+    Aporte Sprint 1 Ivan Camilo Cifuentes
+
+[33mcommit ad5aab7cf32690bf817b7d9b55165add6ec45d0a[m
+Merge: 049ce32 a3083c9
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Thu Oct 13 21:02:35 2022 -0500
+
+    Merge pull request #5
+    
+    Cambio de Subtitulo aprobado
+
+[33mcommit a3083c9b6e5d7f18c38f1876500c18785229c410[m
+Author: erosiano <edwardrossiano@gmail.com>
+Date:   Thu Oct 13 20:59:00 2022 -0500
+
+    Modificacion de subtitulo
+
+[33mcommit 5273bb4b381def8f7c57c71348f94d0c8b090f43[m
+Author: erosiano <edwardrossiano@gmail.com>
+Date:   Thu Oct 13 20:22:08 2022 -0500
+
+    Subtitulo descripcion del proyecto
+
+[33mcommit 049ce3214e6a48648fa7ab079a840abda278956c[m[33m ([m[1;31morigin/release[m[33m)[m
+Author: erosiano <edwardrossiano@gmail.com>
+Date:   Tue Oct 11 14:34:31 2022 -0500
+
+    Autores
+
+[33mcommit 2edcb03f72ef90529252f4f835df23a5debbf920[m
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Fri Oct 7 19:54:59 2022 -0500
+
+    Update README.md
+
+[33mcommit 73fa76ed51a15a93ce9edd50a03748bbb743b7ba[m
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Fri Oct 7 19:54:14 2022 -0500
+
+    Add files via upload
+
+[33mcommit a7dde97d354a364cdee6d2f3ba118444d5b57da8[m
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Fri Oct 7 19:53:38 2022 -0500
+
+    Update README.md
+
+[33mcommit 6c8fe04468185664fe0da85c3792174a9110b400[m
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Fri Oct 7 19:53:11 2022 -0500
+
+    Delete thm.jpg
+
+[33mcommit 63dc7f0bfd0b453fd8ede5e73f2f9c21e24779d6[m
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Fri Oct 7 19:47:33 2022 -0500
+
+    Add files via upload
+
+[33mcommit 6b254b342552b294a9180cea8777c9d48758f958[m
+Author: erossiano <76759790+erossiano@users.noreply.github.com>
+Date:   Fri Oct 7 19:39:55 2022 -0500
+
+    Initial commit
