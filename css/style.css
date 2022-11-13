@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;}
+
+body{
+    background-image: "img\bg-tablet-pattern.svg";
+    background-repeat: repeat}
+
+a{text-decoration: none;
+    font-weight: 700;
+    color: #242E52}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 75px 0;
+    flex-wrap: nowrap}
+
+header img.logo{
+    margin-left: 175px
+}
+
+header nav ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 13px;
+    align-items: center;
+}
+header nav ul a{
+    margin: 0 20px;
+}
+
+header nav ul li button{
+    background-color: #bf2600;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 165px 0 224px;
+    padding: 12.5px 30.5px;
+    font-weight: 600;
+    width: 150px;
+    cursor:pointer; 
+}
+header nav ul img.hamburguesa{display:none}
+
+
+/* Primera parte */
+
+main section{
+    display: flex;
+    justify-content: stretch;
+    margin: 0 165px}
+main section .primeraparte{
+    display: flex;
+    justify-content: center;
+    flex-direction: row}
+.primeraparte article{
+    margin: 28px 50px 28px 0;
+    width: 50vw}
+h2{
+    font-size: 58px;
+    font-weight: 700;
+    letter-spacing: -0.055rem;
+    text-align: left}
+.primertexto{
+    font-size: 16.56px;
+    font-weight: 500;
+    text-align: left;
+    padding-right: 130px;
+    margin: 28px 0}
+.primeraparte article button{
+    background-color: #bf2600;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12.5px 30.5px;
+    font-weight: 600;
+    cursor:pointer}
+.primeraparte div{
+    width 30vw}
+
+
+
+
+
+/* footer color rojo */
+
+footer .banner{
+    background-color:#bf2600 ;
+    margin-top: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between}
+.banner h3 {font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color:white;
+    text-align: left;
+    padding: 64px 165px;
+    width: 50vw}
+.banner button{ background-color: #FFFFFF;
+    font-weight: 600;
+    color: #bf2600;
+    border: none;
+    border-radius: 20px;
+    padding: 12.5px 30.5px;
+    margin: 90px 165px;
+    width: 150px;
+    cursor:pointer}
+
+/* footer color negro */
+
+
+footer .final{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center}
+footer .final div{
+    margin: 50px;
+    align-items: center}
+.redes img{justify-content: center;
+    padding:5px}
+.final div ul {
+    list-style-type: none;
+    flex-direction: column;
+    align-items:stretch}
+.final div ul li{
+    text-decoration: none;
+    padding:10px;}
+form input{padding:12.5px 10px;
+    color:#A0A0A0;
+    border-radius: 50px}
+form button{font-weight: 600;
+    background-color: #bf2600;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12.5px 30.5px;
+    cursor:pointer}
+
+.copyright{font-size: 12.5px;
+font-weight: 500;
+}
+
