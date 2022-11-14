@@ -7,8 +7,6 @@ export const ProductoItem = ({title, image, category, price, id}) => {
   const value = useContext(DataContext);
   const addCarrito = value.addCarrito;
 
-
-
   return (
     
     <div key={id} className="producto">

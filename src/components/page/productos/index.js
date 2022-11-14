@@ -12,12 +12,12 @@ export const ProductosList = () => {
             {
 							productos.map(producto =>(
 								<ProductoItem 
-									key={producto.id}
+									key={producto.isbn}
 									title={producto.title}
 									image={producto.image}
 									category={producto.category}
 									price={producto.price}
-									id={producto.id}
+									id={producto.isbn}
 								/>
 							))
 						}					

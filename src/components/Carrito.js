@@ -11,27 +11,27 @@ export const Carrito = () => {
     setMenu(false);
 	};
 	
-	const reduce = id =>{
+	const reduce = isbn =>{
 		carrito.forEach(item =>{
-			if(item.id === id){
+			if(item.isbn === isbn){
 				item.cantidad === 1 ? item.cantidad = 1: item.cantidad -=1;
 			}
 			setCarrito([...carrito])
 		})
 	}
-	const increase = id =>{
+	const increase = isbn =>{
 		carrito.forEach(item =>{
-			if(item.id === id){
+			if(item.isbn === isbn){
 				item.cantidad +=1;
 			}
 			setCarrito([...carrito])
 		})
 	}
 
-	const removeProducto = id =>{
+	const removeProducto = isbn =>{
 		if(window.confirm("¿Quieres suspender el producto?")){
 			carrito.forEach((item, index)=>{
-				if(item.id === id){
+				if(item.isbn === isbn){
 					item.cantidad = 1;
 					carrito.splice(index, 1)
 				}
@@ -59,31 +59,31 @@ export const Carrito = () => {
 					carrito.length === 0 ? <h2 style={{textAlign: "center", fontSize: "3rem"}}>Carrito Vacio</h2> :<>
 					{
 					carrito.map((producto) => (
-            <div className="carrito__item" key={producto.id}>
-              <img src={producto.image} alt={producto.title} />
-              <div>
-                <h3> {producto.title} </h3>
-                <p className="price">${producto.price}</p>
-              </div>
-              <div>
+            			<div className="carrito__item" key={producto.isbn}>
+						<img src={producto.image} alt={producto.title} />
+						<div>
+							<h3> {producto.title + " - " + producto.isbn} </h3>
+							<p className="price">${producto.price}</p>
+						</div>
+						<div>
+							<box-icon 
+								onClick={() => increase(producto.isbn)} name="up-arrow" 
+								type="solid"
+								/>
+							<p className="cantidad">{producto.cantidad}</p>
 								<box-icon 
-									onClick={() => increase(producto.id)} name="up-arrow" 
-									type="solid"
-									/>
-                <p className="cantidad">{producto.cantidad}</p>
-								<box-icon 
-									onClick={() => reduce(producto.id)} 
+									onClick={() => reduce(producto.isbn)} 
 									name="down-arrow" 
 									type="solid" 
 									/>
-              </div>
-							<div 
-							onClick={() => removeProducto(producto.id)} 
-							className="remove__item"
-							>
-                <box-icon name="trash" />
-              </div>
-            </div>
+						</div>
+										<div 
+										onClick={() => removeProducto(producto.isbn)} 
+										className="remove__item"
+										>
+							<box-icon name="trash" />
+						</div>
+						</div>
 					))
 				};
 					

@@ -10,7 +10,7 @@ export default function Page() {
       <Routes>
 				<Route path="/" element={<Inicio/>} />
 				<Route path="/productos" element={<ProductosList/>} />
-        <Route path="/producto/:id" element={<ProductosDetalles/>} />
+        <Route path="/producto/:id" element={<ProductosDetalles />} />
 			</Routes>
     </section>
   );

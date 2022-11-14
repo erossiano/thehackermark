@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import Data from "../data/products2.js";
+//import Data from "../data/products2.js";
 
 export const DataContext = createContext();
 
@@ -9,10 +9,13 @@ export const DataProvider = (props) => {
 	const [carrito, setCarrito] =useState([])
 	const [total, setTotal] = useState(0)
 
-	console.log("contex(line:12): ", carrito)
+	const producto = getData();
+
+	//console.log("producto(line:12): ", producto)	
 
   useEffect(() => {
-		const producto = Data.items 
+		//const producto = Data.items 
+		//const producto = getData();
 		if(producto){
 			setProductos(producto)
 		}else{
@@ -20,15 +23,15 @@ export const DataProvider = (props) => {
 		}
 	}, []);
 
-	const addCarrito = (id) =>{
+	const addCarrito = (isbn) =>{
 		const check = carrito.every(item =>{
-			return item.id !== id
+			return item.isbn !== isbn
 			
 		})
 
 		if(check){
 			const data = productos.filter(producto =>{
-				return producto.id === id
+				return producto.isbn === isbn
 			})
 			setCarrito([...carrito, ...data])
 		}else{
@@ -70,3 +73,10 @@ export const DataProvider = (props) => {
 		</DataContext.Provider>
 	)
 };
+
+function getData(){
+	const xhttp = new XMLHttpRequest();
+	xhttp.open("GET", 'http://localhost:3001/api/products/', false);
+	xhttp.send()
+	return JSON.parse(xhttp.responseText);
+}
