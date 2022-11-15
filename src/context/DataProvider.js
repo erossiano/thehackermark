@@ -5,9 +5,10 @@ export const DataContext = createContext();
 
 export const DataProvider = (props) => {
 	const [productos, setProductos] = useState([]);
-	const [menu, setMenu] = useState(false)
-	const [carrito, setCarrito] =useState([])
-	const [total, setTotal] = useState(0)
+	const [menu, setMenu] = useState(false);
+	const [carrito, setCarrito] =useState([]);
+	//const [cantidad, setCantidad] = useState(1);
+	const [total, setTotal] = useState(0);
 
 	const producto = getData();
 
@@ -33,6 +34,7 @@ export const DataProvider = (props) => {
 			const data = productos.filter(producto =>{
 				return producto.isbn === isbn
 			})
+			//producto.cantidad = cantidad;
 			setCarrito([...carrito, ...data])
 		}else{
 			alert("El producto se ha añadido al carrito")
@@ -54,6 +56,7 @@ export const DataProvider = (props) => {
 		const getTotal = () =>{
 			const res = carrito.reduce((prev, item) =>{
 				return prev + (item.price * item.cantidad)
+				//return prev + (item.price * cantidad)
 			},0)
 			setTotal(res)
 		}

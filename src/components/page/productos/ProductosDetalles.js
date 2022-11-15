@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {Fragment, useContext, useEffect, useState} from 'react'
 import { DataContext } from "../../../context/DataProvider";
 import { useParams } from "react-router-dom";
 import { ProductoItem } from "./ProductoItem";
@@ -14,13 +14,11 @@ export const ProductosDetalles = () => {
   let item = 0;
 
   useEffect(() =>{
-    //item = 0;
+    item = 0;
     productos.forEach(producto =>{
      
       if(producto.isbn === params.id){
-      console.log('id: ' , params.id, ' - product isbn: ', producto);
-        this.setDetalle([producto]);
-        //viene vacio el detalle console.log("Detalle; ", detalle);
+        setDetalle(producto);
         setUrl(0);
       }
     });
@@ -39,10 +37,9 @@ export const ProductosDetalles = () => {
   };
 
   if(detalle.length < 1) return null;
-  console.log('detalle: AQUI');
+  console.log('detalle: ', detalle.isbn);
   return (
-    <>
-      {
+    <Fragment>
         <div className="detalles">
           <h2>{detalle.title}</h2>
           <p className="price">${detalle.price}</p>
@@ -69,7 +66,7 @@ export const ProductosDetalles = () => {
           {
             url ? <img src={images} alt={detalle.title}/> : <img src={detalle.image} alt={detalle.title}/>
           }
-          { {/* <input type="range" min="1" max="36" step="1" value={url} onChange={handleInput} />  */}}
+          {/* <input type="range" min="1" max="36" step="1" value={url} onChange={handleInput} />  */}
           <div className="description">
           <p><b>Descripción: </b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum necessitatibus soluta alias porro, saepe facere expedita asperiores quos fugit inventore ex, itaque sapiente quae pariatur beatae optio repellat aperiam quia possimus mollitia repellendus? Illo natus quam eaque impedit omnis pariatur!</p>
           <br/>
@@ -77,26 +74,25 @@ export const ProductosDetalles = () => {
           </div>
           
         </div>
-      }
-    <h2 className="relacionados">Productos relacionados</h2>
-    <div className="productos">
-        {
-          productos.map((producto) => {
-            if((item < 6)&&(detalle.category === producto.category)){
-              item++;
-            return <ProductoItem 
-                    key={producto.isbn}
-                    title={producto.title}
-                    image={producto.image}
-                    category={producto.category}
-                    price={producto.price}
-                    id={producto.isbn}
-                  />
+        <h2 className="relacionados">Productos relacionados</h2>
+        <div className="productos">
+            {
+              productos.map((producto) => {
+                if((item < 6)&&(detalle.category === producto.category)){
+                  item++;
+                return <ProductoItem 
+                        key={producto.isbn}
+                        title={producto.title}
+                        image={producto.image}
+                        category={producto.category}
+                        price={producto.price}
+                        id={producto.isbn}
+                      />
+              }
+            })
           }
-        })
-      }
-     
-    </div>
-    </>
+        
+        </div> 
+    </Fragment>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { DataContext } from "../context/DataProvider";
 
 export const Carrito = () => {
@@ -6,6 +6,7 @@ export const Carrito = () => {
   const [menu, setMenu] = value.menu;
   const [carrito, setCarrito] = value.carrito;
   const [total] = value.total;
+  //const [cantidad, setCantidad] = useState(1);
 
   const tooglefalse = () => {
     setMenu(false);
@@ -15,6 +16,7 @@ export const Carrito = () => {
 		carrito.forEach(item =>{
 			if(item.isbn === isbn){
 				item.cantidad === 1 ? item.cantidad = 1: item.cantidad -=1;
+				//cantidad === 1 ? setCantidad(1): setCantidad(cantidad-1);
 			}
 			setCarrito([...carrito])
 		})
@@ -22,6 +24,7 @@ export const Carrito = () => {
 	const increase = isbn =>{
 		carrito.forEach(item =>{
 			if(item.isbn === isbn){
+				//setCantidad(cantidad+=1)
 				item.cantidad +=1;
 			}
 			setCarrito([...carrito])
@@ -33,6 +36,7 @@ export const Carrito = () => {
 			carrito.forEach((item, index)=>{
 				if(item.isbn === isbn){
 					item.cantidad = 1;
+					//setCantidad(1);
 					carrito.splice(index, 1)
 				}
 			})
@@ -62,7 +66,7 @@ export const Carrito = () => {
             			<div className="carrito__item" key={producto.isbn}>
 						<img src={producto.image} alt={producto.title} />
 						<div>
-							<h3> {producto.title + " - " + producto.isbn} </h3>
+							<h3> {producto.title} </h3>
 							<p className="price">${producto.price}</p>
 						</div>
 						<div>
