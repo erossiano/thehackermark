@@ -59,7 +59,7 @@ export const ProductosDetalles = () => {
             <p>Cantidad</p>
           </div>
           </div>
-          <button onClick={() => addCarrito(detalle.id)}>
+          <button onClick={() => addCarrito(detalle.isbn)}>
             Añadir al carrito
           </button>
           
