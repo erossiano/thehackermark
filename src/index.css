@@ -83,22 +83,22 @@ header ul li a{
     cursor: pointer;
 }
 .cart box-icon{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     
 }
 .cart span{
     position: absolute;
     top: -1rem;
-    right: -1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    right: -1.0rem;
+    width: 2.0rem;
+    height: 2.0rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     padding: 0rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     border-radius: 50%;
     background-color: crimson;
@@ -111,54 +111,56 @@ header ul li a{
     color: #08a05c;
 }
 .productos{
-    padding: 5rem 3rem;
+    padding: 2rem 3rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 3rem 1rem;
-    box-sizing: border-box ;
+    box-sizing: border-box;
 } 
 .producto{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 1px 10px 10px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.1);
     border: 6px solid transparent;
     cursor: pointer;
     border-radius: 5px;
 }
 .producto:hover{
-    border: 6px solid #08a05c57;
+    border: 3px solid #08a05c57;
     ;
 }
 .producto__img img{
-    width: 200px;
-    min-height: 300px;
-    max-height: 300px;
+    width: 150px;
+    min-height: 250px;
+    max-height: 250px;
 }
 .producto__footer{
     padding: 1rem;
 }
 .producto__footer h1{
+    text-align: justify;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #1a202c;
     font-family: Helvetica, sans-serif;
-    min-height: 2.5em;
+    min-height: 2.0em;
 }
 .producto__footer p{
     font-weight: 700;
     color: rgba(0, 0, 0, 0.555);
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 14px;
 }
 .producto__footer .price{
     font-size: 2rem;
     color: #1a202c;
+    text-align: end;
 }
 .productos .bottom{
     width: 100%;
-    height: 45px;
+    height: 40px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem 2rem;
@@ -174,7 +176,7 @@ header ul li a{
     max-width: 250px;
     width: 100%;
     margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: white;
     font-weight: 600;
 }
@@ -188,7 +190,9 @@ header ul li a{
 }
 .bottom div a{
     color: white;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 0.9rem;
+
 }
 .bottom div a:hover{
     color: white;
@@ -211,11 +215,11 @@ header ul li a{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(.5);
-    width: 60%;
+    width: 50%;
     height: 80%;
-    padding: 1.6rem;
+    padding: 1rem;
     border-radius: 8px;
-    overflow-x: scroll;
+    overflow-y: scroll;
     transition: all 300ms ease-in-out;
     background-color: white;
     opacity: 0;
@@ -223,7 +227,7 @@ header ul li a{
 }
 .carrito h2{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .carritos.show{
     visibility: visible;
@@ -236,17 +240,17 @@ header ul li a{
 }
 .carrito__close box-icon{
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     transform: all 300ms ease-in-out;
-    margin: 3rem 0 0 2rem
+    margin: 0.5rem 0 0 2rem
 }
 .carrito__close box-icon:hover {
     fill: crimson;
 }
 .carrito__center{
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
 }
 .carrito__item{
@@ -263,19 +267,18 @@ header ul li a{
     align-items: center;
 }
 .carrito__item img{
-    width: 9em;
+    width: 7em;
     max-height: 9rem;
-
 }
 .carrito__item h3{
     margin: 1.5rem 0 0 1rem;
     font-family: Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .carrito__item .price{
     color: #1a202c;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: end;
     margin-left: -10rem ;
@@ -283,20 +286,22 @@ header ul li a{
 }
 .carrito__item box-icon{
     fill:#08a05c;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
-    margin-top: .3rem;
+    flex: 30%;
 }
 .carrito__item .cantidad{
+    display: flex;
+    align-items: center;
     font-size: 2rem;
     font-weight: bold;
+    flex: 40%;
 }
 .carrito__item .remove__item box-icon{
-    width: 60px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     fill:  crimson;
-    margin-top: 2rem;
 }
 .carrito__footer{
     text-align: center;

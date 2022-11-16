@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { DataContext } from "../context/DataProvider";
 
 export const Carrito = () => {
@@ -89,7 +89,7 @@ export const Carrito = () => {
 						</div>
 						</div>
 					))
-				};
+				}
 					
 					</>
 					}
