@@ -2,6 +2,16 @@
 import {app, router} from "./server.js";
 //Importar config de BD
 import conexion from "./database.js";
+// Passport config
+import passp from "./config/passport.js";
+
+//import "./routes/ProductsRoutes.js"
+//Import User functions
+import {
+    registerUser,
+    loginUser
+} from "./schemas/Users.js";
+
 
 //Import CRUD Products functions
 import {
@@ -18,9 +28,15 @@ app.get('/',
         res.json({ message: "Welcome to server." });
 });
 
+
 //Routes API for Products
 router.get("/api/products/", getAllProducts);
 router.get("/api/products/:isbn", getProduct);
 router.post("/api/products/", createProduct);
 router.put("/api/products/:isbn", updateProduct);
 router.delete("/api/products/:isbn", deleteProduct);
+
+
+//Routes API Users
+router.post("/api/user/register", registerUser);
+router.post("/api/user/register", loginUser);
