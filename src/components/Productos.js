@@ -2,7 +2,7 @@
 /* eslint-disable array-callback-return */
 import React from "react";
 //import "./App.css";
-import "../bootstrap.min.css";
+//import "../bootstrap.min.css";
 import { Link } from 'react-router-dom';
 import Logo from "../images/thm.png";
 import {
@@ -119,10 +119,10 @@ class Productos extends React.Component {
             <div className="col-3"></div>
             <div className="col border mt-3"><br></br>
               {/*<img class="img-fluid" src="https://scontent-bog1-1.xx.fbcdn.net/v/t39.30808-6/314012421_503932268418412_1944509815264465782_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=lOejjEzQbKIAX83FKoe&_nc_ht=scontent-bog1-1.xx&oh=00_AfDmttqjRmldy5hGZdrKGMXXB1QgAhFDFmAc9ZAH9wlpsg&oe=63675BE0" width="200px"/>*/}
-              <img src={Logo} alt="Logo" width="150" />
+              {/* <img src={Logo} alt="Logo" width="150" /> */}
             </div>
             <div className="col border mt-3">
-                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TZlVYaV9HbU7MuTYStqtVkbKjQpgUUTu2Q&usqp=CAU" width="80px"/>
+                <img alt="icon" class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TZlVYaV9HbU7MuTYStqtVkbKjQpgUUTu2Q&usqp=CAU" width="80px"/>
                 <p>DANILO HERNÁNDEZ <br></br>Administrador</p>
             </div>
             <div className="col border mt-3"><br></br>
@@ -348,10 +348,10 @@ class Productos extends React.Component {
             </Button>
           </ModalFooter>
         </Modal>
-
+{/* 
         <br></br>
         <div className ="alert alert-warning text-center">Todos los derechos reservados © TheHackerMark 2022</div>
-
+ */}
       </>
     );
   }
