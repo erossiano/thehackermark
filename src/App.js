@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 import { Carrito } from "./components/Carrito";
 import {DataProvider} from './context/DataProvider';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
@@ -25,19 +26,18 @@ function App() {
       <Header />
       <Carrito />
       <Pages />
-    <Routes>
-      <Route path="/" element={<TipoUsuario />} /> 
-      <Route path="/tipousuario" element={<TipoUsuario />} />
-      <Route exact path="/productos" element={<Productos />}></Route>
-      <Route exact path="/listaventas" element={<ListaVentas />}></Route>
-      <Route path="/cliente" element={<Cliente />}></Route>
-      <Route path="/listacompras" element={<ListaCompras />}></Route>
-      <Route path="/administrador" element={<Administrador />}></Route>
-    </Routes>
 
-
-
+      <Routes>
+        <Route path="/" element={<TipoUsuario />} /> 
+        <Route path="/tipousuario" element={<TipoUsuario />} />
+        <Route exact path="/productos" element={<Productos />}></Route>
+        <Route exact path="/listaventas" element={<ListaVentas />}></Route>
+        <Route path="/cliente" element={<Cliente />}></Route>
+        <Route path="/listacompras" element={<ListaCompras />}></Route>
+        <Route path="/administrador" element={<Administrador />}></Route>
+      </Routes>
       </Router>
+      <Footer />
     </div>
     </DataProvider>
   );

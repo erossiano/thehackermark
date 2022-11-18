@@ -4,7 +4,8 @@ import React from "react";
 //import "./App.css";
 //import "../bootstrap.min.css";
 import { Link } from 'react-router-dom';
-import Logo from "../images/thm.png";
+//import { DataContext } from "../context/DataProvider";
+
 import {
   Table,
   Button,
@@ -15,6 +16,7 @@ import {
   FormGroup,
   ModalFooter,
 } from "reactstrap";
+
 import data from "../data/products"
 /*const data = [
   { id: 1, producto: "FUNDAMENTOS DE PROGRAMACIÓN", autor: "Luis Joyanes Aguilar", precio: "$547.000", stock: "20" },
@@ -26,6 +28,9 @@ import data from "../data/products"
 ];*/
 
 class Productos extends React.Component {
+  //const value = useContext(DataContext);
+	//const [productos] = value.productos;
+
   state = {
     data: data,
     modalActualizar: false,
@@ -119,7 +124,6 @@ class Productos extends React.Component {
             <div className="col-3"></div>
             <div className="col border mt-3"><br></br>
               {/*<img class="img-fluid" src="https://scontent-bog1-1.xx.fbcdn.net/v/t39.30808-6/314012421_503932268418412_1944509815264465782_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=lOejjEzQbKIAX83FKoe&_nc_ht=scontent-bog1-1.xx&oh=00_AfDmttqjRmldy5hGZdrKGMXXB1QgAhFDFmAc9ZAH9wlpsg&oe=63675BE0" width="200px"/>*/}
-              {/* <img src={Logo} alt="Logo" width="150" /> */}
             </div>
             <div className="col border mt-3">
                 <img alt="icon" class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TZlVYaV9HbU7MuTYStqtVkbKjQpgUUTu2Q&usqp=CAU" width="80px"/>
@@ -143,12 +147,12 @@ class Productos extends React.Component {
           <Table>
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Nombre producto</th>
-                <th>Autor</th>
-                <th>Precio $</th>
-                <th>Stock</th>
-                <th>Acción</th>
+                <th scope="col">#ISBN</th>
+                <th scope="col">Título</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Valor</th>
               </tr>
             </thead>
 
