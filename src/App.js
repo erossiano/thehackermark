@@ -1,4 +1,5 @@
-import React from 'react'
+//import axion from "axios";
+import React, { useEffect, useState } from 'react'
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Carrito } from "./components/Carrito";
@@ -14,10 +15,21 @@ import ListaCompras from './components/ListaCompras';
 import ListaVentas from './components/ListaVentas';
 import TipoUsuario from './components/TipoUsuario';
 import Productos from './components/Productos';
+import axios from "axios";
 
-
+//const urlBase = "https://thehackermark.up.railway.app/";
 
 function App() {
+  /* const [post, setPost] = useState(null);
+
+  useEffect(() => {
+      axios.get(urlBase).then(
+        (response) => {
+          setPost(response.data);
+        }
+      );
+    }
+  ); */
 
   return (
     <DataProvider>
