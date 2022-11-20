@@ -1,5 +1,5 @@
 //import axion from "axios";
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Carrito } from "./components/Carrito";
@@ -15,7 +15,7 @@ import ListaCompras from './components/ListaCompras';
 import ListaVentas from './components/ListaVentas';
 import TipoUsuario from './components/TipoUsuario';
 import Productos from './components/Productos';
-import axios from "axios";
+//import axios from "axios";
 
 //const urlBase = "https://thehackermark.up.railway.app/";
 
@@ -32,26 +32,28 @@ function App() {
   ); */
 
   return (
+    
     <DataProvider>
-    <div className="App">
-      <Router>
-      <Header />
-      <Carrito />
-      <Pages />
+        <div className="App">
+          <Router basename="/thehackermark">
+          <Header />
+          <Carrito />
+          <Pages />
 
-      <Routes>
-        <Route path="/" element={<TipoUsuario />} /> 
-        <Route path="/tipousuario" element={<TipoUsuario />} />
-        <Route exact path="/productos" element={<Productos />}></Route>
-        <Route exact path="/listaventas" element={<ListaVentas />}></Route>
-        <Route path="/cliente" element={<Cliente />}></Route>
-        <Route path="/listacompras" element={<ListaCompras />}></Route>
-        <Route path="/administrador" element={<Administrador />}></Route>
-      </Routes>
-      </Router>
-      <Footer />
-    </div>
+          <Routes>
+            <Route path="/" element={<TipoUsuario />} /> 
+            <Route path="/tipousuario" element={<TipoUsuario />} />
+            <Route exact path="/productos" element={<Productos />}></Route>
+            <Route exact path="/listaventas" element={<ListaVentas />}></Route>
+            <Route path="/cliente" element={<Cliente />}></Route>
+            <Route path="/listacompras" element={<ListaCompras />}></Route>
+            <Route path="/administrador" element={<Administrador />}></Route>
+          </Routes>
+          </Router>
+          <Footer />
+        </div>
     </DataProvider>
+   
   );
 }
 
