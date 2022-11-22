@@ -9,18 +9,24 @@ const ariaLabel = { 'aria-label': 'description' };
 
 const Login = () =>{
     const [username, setUsername] = useState();
+    const [password, setPassword] = useState();
     
     function onChangeUsername(){
         setUsername(username);
+        setPassword(password);
     }
 
+
+    
+
     return (
+        <form onSubmit={onSubmitHandled}>
         <FormControl sx={{
                         '& > :not(style)': { m: 1 , minWidth: 350},
                         }}
             noValidate
-            autoComplete="off" >
-                <TextField id="username" label="Username" variant="outlined" inputProps={ariaLabel}
+            autoComplete="off">
+            <TextField id="username" label="Username" variant="outlined" inputProps={ariaLabel}
                     onChange={onChangeUsername}
                     InputProps={{
                     startAdornment: (
@@ -37,15 +43,22 @@ const Login = () =>{
                     </InputAdornment>
                 ),
                 }} />
-          <Button variant="contained"
-            onClick={() => {
-                alert('clicked: ' + username);
-            }}>
+          <Button type="submit" variant="contained">
                 Login
-            </Button>
+          </Button>
       </FormControl>
+      </form>
 )};
 
+function onSubmitHandled(){
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", 'http://localhost:3001/api/users/6375419ab21fd173cdc9e70c', false);
+    //xhttp.open("GET", 'https://thehackermark.up.railway.app/api/products/', false);
+    xhttp.send();
+    let myvar = JSON.parse(xhttp.responseText);
+    console.log("json respuesta: ", myvar);
+    return JSON.parse(xhttp.responseText);
+}
 /* 
 
 

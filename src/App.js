@@ -1,6 +1,7 @@
 //import axion from "axios";
 import React from 'react'
 import { Header } from "./components/Header";
+import RegistrationForm from './components/Login/RegistrationForm';
 import { Footer } from "./components/Footer";
 import { Carrito } from "./components/Carrito";
 import {DataProvider} from './context/DataProvider';
@@ -39,7 +40,7 @@ function App() {
           <Header />
           <Carrito />
           <Pages />
-
+          <RegistrationForm />
           <Routes>
             <Route path="/" element={<TipoUsuario />} /> 
             <Route path="/tipousuario" element={<TipoUsuario />} />

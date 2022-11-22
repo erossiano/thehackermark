@@ -1,122 +1,164 @@
 *{
-    padding: 0;
+    max-width: 100vh; /* ancho maximo  */
     margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/*----------------APP COMPONENTES GENERAL-------------------*/
 .App{
-    max-width: 1555px;
-    width: 100%;
-    min-height: 100vh;
-    margin: auto;
-    box-shadow: 0 2px 6px #08a05ca4;;
-    padding: 0 15px;
-    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.823);/* Fondo central   */
+    min-width: 80vw;  /* ancho al 80%  */
+    margin: 0px 10vw;  /*  Margenes a los lados del 10% cada uno */
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.823); /* sombra  */
+    padding: 50px 15px; /* margen interior, encima dejamos 50px para que no aparezcan cosas detras del header   */
+    height: 100vw; /* Alto del contenido completo */
+}
 
-}
-/*-----------------INICIO-------------------*/
-.inicio{
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 9rem ;
-}
-.inicio h1{
-    font-size: 2.5rem;
-    color: #08a05c;
-}
-.inicio img{
-    width: 100%;
+.root{
+    background-color: gray;
+    max-width: 100vw;
+    width: 100vw;
 }
 
 /* ----------------- HEADER -------------------*/
 header{
-    width: 97%;
-    min-height: 100px;
-    max-width:1530px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    position: fixed;
-    box-sizing: border-box ;
-    background-color: white;
-    box-shadow: 0 10px 10px #08a05c50;
-}
-a{      
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-a:hover{
-    color: #08a05c;
-}
-.menu{
-    display: none;
-}
-li{
-    list-style: none;
+    width: 100%; /* Ancho completo de pagina*/
+    max-width: 100%; /* Ancho completo de pagina responsive*/
+    min-height: 100px; /*altura de header responsive*/
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    font-weight: bold; /* texto en negrita*/
+    display: flex!important; /* Alineacion de los 4 bloques horizontalmente */
+    justify-content: space-around!important; /*distancia entre bloques*/
+    align-items: center; /* Alineacion centrada verticalmente*/
+    box-sizing: border-box; /* tamano del contenedor  */
+    background-color: rgb(200, 200, 200); /* fondo  */
+    opacity: 0.95; /*  transparencia del header */
+    box-shadow: 0 5px 5px #696969;/* sombra del header  */
+    z-index: 2!important;
 }
 
+.menu{
+   /* border: 2px solid black;*/
+	padding: 25px;
+	margin: 0;
+    cursor: pointer;
+    background-color: rgb(200, 200, 200); /* fondo  */
+}
+
+.logo{
+    /*border: 2px solid black;*/
+    width: 80%;
+    justify-content: left;
+    background-color: rgb(200, 200, 200); /* fondo  */
+
+}*
 header ul{
-    display: flex;
-    padding: 0;
-    margin: 0;
+    background-color: rgb(200, 200, 200); /* fondo  */
+    /*border: 2px solid black;*/
+    display: flex!important;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 10px 0 0 0;
 }
+
 header ul li{
-    padding: 0 1rem;
-}
-header ul li a{
+    list-style: none!important;
+    padding: 10px;
+    margin: 0px 2rem;
     font-weight: bold;
 }
 
+
+/*carrito*/
 .cart{
+    /*border: 2px solid black;*/
     position: relative;
+    height: 50px;
     cursor: pointer;
 }
 .cart box-icon{
-    width: 40px;
-    height: 40px;
-    
+    height: 100%;
+    display: flex;    
 }
+
 .cart span{
-    position: absolute;
+    position: relative!important;
     top: -1rem;
-    right: -1.0rem;
-    width: 2.0rem;
-    height: 2.0rem;
+    right: -1rem;
+    width: 2rem;
+    height: 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     color: white;
-    padding: 0rem;
-    font-size: 1.2rem;
+    padding: 0.1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     border-radius: 50%;
     background-color: crimson;
 }
 
+
+/*----------------INICIO-------------------*/
+
+
+.inicio{
+    background-color: darkred;
+    box-sizing: border-box;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    width: 79vw;
+    max-width: 79vw;
+    margin: 50px 0 0 0;
+    padding: 10px 0px;
+}
+.inicio h1{
+    font-size: 2rem;
+    color:white;
+    margin:0px 25px;
+}
+.inicio img{
+    width: 100%;
+}
+
+.container-fluid{
+    position: static!important;
+    z-index: -1!important;
+    padding-top: 100px;
+
+
+}
+
 /*----------- PRODUCTOS ------------*/
 .produ{
-    font-size: 2.4rem;
-    padding: 10rem 0 0 0;
-    color: #08a05c;
+    box-sizing: border-box;
+    background-color: #1a202c;
+    color: white;
+    font-size: 3rem;
+    align-items: center;
+    padding: 5rem;
+    margin: 50px 0;
+    max-width: 78vw;
+    width: 78vw;
+    display: flex;
 }
+
 .productos{
+    border: red;
+    width: 70vw;
+    justify-content: center;
+    margin: 0 15vw;
     padding: 2rem 3rem;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 3rem 1rem;
-    box-sizing: border-box;
+    box-sizing: border-box!important;
+    position: static!important;
 } 
 .producto{
     display: flex;
@@ -128,7 +170,7 @@ header ul li a{
     border-radius: 5px;
 }
 .producto:hover{
-    border: 3px solid #08a05c57;
+    border: 3px solid darkblue;
     ;
 }
 .producto__img img{
@@ -181,7 +223,7 @@ header ul li a{
     font-weight: 600;
 }
 .bottom div{
-    background-color:#08a05c;
+    background-color:  rgb(200, 200, 200);
     display: grid;
     align-items: center;
     text-align: center;
@@ -202,7 +244,8 @@ header ul li a{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    max-width: 100vw;
+    width: 100vw;
     height: 100%;
     transition: all 300ms ease-in-out;
     background-color: rgba(0, 0, 0, .6);
@@ -285,7 +328,7 @@ header ul li a{
     margin: auto;
 }
 .carrito__item box-icon{
-    fill:#08a05c;
+    fill:  rgb(200, 200, 200);
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -529,4 +572,18 @@ header ul li a{
     .detalles{
         padding: 1rem 0;
     }
+}
+
+
+.alert-warning {
+    box-sizing: content-box!important;
+    width: 77vw!important;
+    max-width: 77vw!important;
+    position: fixed!important;
+    margin: 0 0 0 -15px!important;
+    bottom: 0!important;
+    justify-content: center!important;
+    opacity: 0.6;
+
+
 }
