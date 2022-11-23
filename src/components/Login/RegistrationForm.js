@@ -33,8 +33,9 @@ function RegistrationForm() {
         gxhttp.open("GET", `https://thehackermark.up.railway.app/api/users/email/${email}`, false);
         gxhttp.send();
         let usr = JSON.parse(gxhttp.responseText);
+        
         let id = usr[0]._id;
-        console.log("id: ", id);
+        //console.log("id: ", id);
 
         if(!id){
             let user = {

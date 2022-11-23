@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route} from "react-router-dom";
-import Navbar from "./page/inicio/Navbar";
 import { ProductosList } from "./page/productos/ProductosList";
 import { ProductosDetalles } from "./page/productos/ProductosDetalles";
 import { RegisterPage } from "./page/usuarios/RegisterPage";
