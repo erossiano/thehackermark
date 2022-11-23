@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import '../../index.css';
+import Page from '../Page';
+
 function RegistrationForm() {
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
@@ -28,7 +30,7 @@ function RegistrationForm() {
         //console.log(name, email, password, confirmPassword);
 
         const gxhttp = new XMLHttpRequest();
-        gxhttp.open("GET", `http://localhost:3001/api/users/email/${email}`, false);
+        gxhttp.open("GET", `https://thehackermark.up.railway.app/api/users/email/${email}`, false);
         gxhttp.send();
         let usr = JSON.parse(gxhttp.responseText);
         let id = usr[0]._id;
@@ -44,7 +46,7 @@ function RegistrationForm() {
             };      
 
             const xhttp = new XMLHttpRequest();
-            xhttp.open("POST", 'http://localhost:3001/api/users', false);
+            xhttp.open("POST", 'https://thehackermark.up.railway.app/api/users', false);
             xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhttp.send(JSON.stringify(user));
         }else{
@@ -54,27 +56,29 @@ function RegistrationForm() {
 
     return(
         <>
-        <div className="row mt-5 mb-3">
-            <div className="mb-3">
+        <h1 className="produ">REGISTRO</h1>
+        <div className="productos flex flex-column w-50">
+            <div>
                 <div className="form-group">
-                    <label className="form-label" for="name">Name </label>
+                    <label className="form-label" htmlFor="name">Name </label>
                     <input className="form-control" value={name} onChange = {(e) => handleInputChange(e)}  type="text" id="name" placeholder="Name"/>
                 </div>
                 <div className="form-group">
-                    <label className="form-label" for="email">Email </label>
+                    <label className="form-label" htmlFor="email">Email </label>
                     <input  className="form-control" type="email" id="email" value={email} onChange = {(e) => handleInputChange(e)}  placeholder="Email"/>
                 </div>
                 <div className="form-group">
-                    <label className="form-label" for="password">Password </label>
+                    <label className="form-label" htmlFor="password">Password </label>
                     <input className="form-control" type="password" value={password} onChange = {(e) => handleInputChange(e)}   id="password" placeholder="Password"/>
                 </div>
                 <div className="form-group">
-                    <label className="form-label" for="confirmPassword">Confirm Password </label>
+                    <label className="form-label" htmlFor="confirmPassword">Confirm Password </label>
                     <input className="form-control" type="password" value={confirmPassword} onChange = {(e) => handleInputChange(e)}  id="confirmPassword" placeholder="Confirm Password"/>
                 </div>
-            </div>
-            <div class="footer">
-                <button type="submit" class="btn" onClick={()=>handleSubmit()} >Register</button>
+                
+                <div className="form-group">
+                    <button type="submit" className="btn btn-primary" onClick={()=>handleSubmit()} >Register</button>
+                </div>
             </div>
         </div>   
         </>   

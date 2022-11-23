@@ -79,8 +79,8 @@ export const DataProvider = (props) => {
 
 function getData(){
 	const xhttp = new XMLHttpRequest();
-	xhttp.open("GET", 'http://localhost:3001/api/products/', false);
-	//xhttp.open("GET", 'https://thehackermark.up.railway.app/api/products/', false);
+	//xhttp.open("GET", 'http://localhost:3001/api/products/', false);
+	xhttp.open("GET", 'https://thehackermark.up.railway.app/api/products/', false);
 	xhttp.send()
 	return JSON.parse(xhttp.responseText);
 }

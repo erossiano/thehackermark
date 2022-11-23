@@ -2,6 +2,7 @@ import React, { useContext} from "react";
 import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
 import Nike from "../images/inicio.png";
+import Navbar from "./page/inicio/Navbar";
 
 
 export const Header = () => {
@@ -21,18 +22,19 @@ export const Header = () => {
       <box-icon name="menu"></box-icon>
       </div>
       <Link to="/">
-      <div className="logo">
+      <div className="logo align-content-lg-start">
         <img src={Nike} alt="Nike" width="150" />
       </div>
       </Link>
-      <ul>
+{/*       <ul>
         <li>
           <Link to="/">INICIO</Link>
         </li>
         <li>
           <Link to="/productos">PRODUCTOS</Link>
         </li>
-      </ul>
+      </ul> */}
+
       <div className="cart" onClick={toogleMenu}>
         <box-icon name="cart"></box-icon>
         <span className="item__total"> {carrito.length} </span>

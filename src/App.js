@@ -16,6 +16,9 @@ import ListaCompras from './components/ListaCompras';
 import ListaVentas from './components/ListaVentas';
 import TipoUsuario from './components/TipoUsuario';
 import Productos from './components/Productos';
+import { ProductosList } from './components/page/productos/ProductosList';
+import Navbar from './components/page/inicio/Navbar';
+import { RegisterPage } from './components/page/usuarios/RegisterPage';
 //import axios from "axios";
 
 //const urlBase = "https://thehackermark.up.railway.app/";
@@ -37,19 +40,10 @@ function App() {
     <DataProvider>
         <div className="App">
           <Router basename="/thehackermark">
-          <Header />
-          <Carrito />
-          <Pages />
-          <RegistrationForm />
-          <Routes>
-            <Route path="/" element={<TipoUsuario />} /> 
-            <Route path="/tipousuario" element={<TipoUsuario />} />
-            <Route exact path="/productos" element={<Productos />}></Route>
-            <Route exact path="/listaventas" element={<ListaVentas />}></Route>
-            <Route path="/cliente" element={<Cliente />}></Route>
-            <Route path="/listacompras" element={<ListaCompras />}></Route>
-            <Route path="/administrador" element={<Administrador />}></Route>
-          </Routes>
+            <Header />
+            <Carrito />
+            <Navbar />
+            <Pages />
           </Router>
           <Footer />
         </div>
