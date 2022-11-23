@@ -41,7 +41,8 @@ const Login = () =>{
             };
 
             const xhttp = new XMLHttpRequest();
-            xhttp.open("POST", 'http://localhost:3001/api/users/auth', false);
+            //xhttp.open("POST", 'http://localhost:3001/api/users/auth', false);
+            xhttp.open("POST", 'https://thehackermark.up.railway.app/api/users/auth', false);
             xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhttp.send(JSON.stringify(user));  
             //console.log(xhttp.responseText);
