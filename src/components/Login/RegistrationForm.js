@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
+import { toast } from 'react-toastify';
 import '../../index.css';
-import Page from '../Page';
 
 function RegistrationForm() {
     const [name, setName] = useState(null);
@@ -29,15 +29,15 @@ function RegistrationForm() {
     const handleSubmit  = () => {
         //console.log(name, email, password, confirmPassword);
 
-        const gxhttp = new XMLHttpRequest();
+ /*        const gxhttp = new XMLHttpRequest();
         gxhttp.open("GET", `https://thehackermark.up.railway.app/api/users/email/${email}`, false);
         gxhttp.send();
-        let usr = JSON.parse(gxhttp.responseText);
+        let usr = JSON.parse(gxhttp.responseText); */
+/* 
         
         let id = usr[0]._id;
-        //console.log("id: ", id);
-
-        if(!id){
+         */
+        try{
             let user = {
                 name : name,
                 email : email,
@@ -50,10 +50,17 @@ function RegistrationForm() {
             xhttp.open("POST", 'https://thehackermark.up.railway.app/api/users', false);
             xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhttp.send(JSON.stringify(user));
-        }else{
-            alert("El usuario con Email: " + email + " ya existe!");
+            
+            let resp = JSON.parse(xhttp.responseText);
+            notify(resp.message);
+
+        }catch(error){
+            notify("El usuario con Email: " + email + " ya existe!");
+           //window.location.reload();
         }
     }
+
+    const notify = (message) => toast(message);
 
     return(
         <>
@@ -81,7 +88,7 @@ function RegistrationForm() {
                     <button type="submit" className="btn btn-primary" onClick={()=>handleSubmit()} >Register</button>
                 </div>
             </div>
-        </div>   
+        </div>  
         </>   
     )       
 }

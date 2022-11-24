@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import '../../index.css';
-
+import { toast } from 'react-toastify';
 
 const ariaLabel = { 'aria-label': 'description' };
 
+const notify = (message) => toast(message);
 
 const Login = () =>{
     const [email, setEmail] = useState();
@@ -30,9 +31,7 @@ const Login = () =>{
         let id = usr[0]._id;
         let pass = usr[0].password;
         //console.log("id: ", id, " pass:", pass);
-
-
-        
+        let message = "";
 
         if(id){
             let user = {
@@ -47,18 +46,22 @@ const Login = () =>{
             xhttp.send(JSON.stringify(user));  
             //console.log(xhttp.responseText);
             
-            
-            if (xhttp.session.loggedin) {
+
+            console.log(user.email);
+            if (xhttp.status === 200) {
                 // Output username
-                xhttp.send('Welcome back, ' + xhttp.session.email + '!');
+                message = 'Welcome back, ' + user.email + '!';
             } else {
                 // Not logged in
-                xhttp.send('Please login to view this page!');
+                message = 'Please login to view this page!';
+                window.location.reload();
             }
+             
         }else{
-            alert("El usuario con Email: " + email + " no existe!");
+            message = "El usuario con Email: " + email + " no existe!";
         }
-    
+
+        notify(message);
     }
 
     
