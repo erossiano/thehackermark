@@ -120,10 +120,9 @@ class Productos extends React.Component {
     return (
       <>
         <div className="container-fluid text-center">
-          <div className="row">
+{/*           <div className="row">
             <div className="col-3"></div>
             <div className="col border mt-3"><br></br>
-              {/*<img class="img-fluid" src="https://scontent-bog1-1.xx.fbcdn.net/v/t39.30808-6/314012421_503932268418412_1944509815264465782_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=lOejjEzQbKIAX83FKoe&_nc_ht=scontent-bog1-1.xx&oh=00_AfDmttqjRmldy5hGZdrKGMXXB1QgAhFDFmAc9ZAH9wlpsg&oe=63675BE0" width="200px"/>*/}
             </div>
             <div className="col border mt-3">
                 <img alt="icon" class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TZlVYaV9HbU7MuTYStqtVkbKjQpgUUTu2Q&usqp=CAU" width="80px"/>
@@ -134,7 +133,7 @@ class Productos extends React.Component {
             <Link to="/listaventas" class="btn btn-outline-danger mt-3">Lista de ventas</Link><br></br>
             </div>       
             <div className="col-3"></div>       
-          </div> 
+          </div>  */}
 
          <div className="row mt-3">
             <div class="col-3"></div>
