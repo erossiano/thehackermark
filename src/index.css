@@ -1,13 +1,589 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    max-width: 100vh; /* ancho maximo  */
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*----------------APP COMPONENTES GENERAL-------------------*/
+.App{
+    background-color: rgba(255, 255, 255, 0.823);/* Fondo central   */
+    min-width: 80vw;  /* ancho al 80%  */
+    margin: 0px 10vw;  /*  Margenes a los lados del 10% cada uno */
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.823); /* sombra  */
+    padding: 50px 15px; /* margen interior, encima dejamos 50px para que no aparezcan cosas detras del header   */
+    height: 100vw; /* Alto del contenido completo */
+}
+
+.root{
+    background-color: gray;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+/* ----------------- HEADER -------------------*/
+header{
+    width: 100%; /* Ancho completo de pagina*/
+    max-width: 100%; /* Ancho completo de pagina responsive*/
+    min-height: 100px; /*altura de header responsive*/
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    font-weight: bold; /* texto en negrita*/
+    display: flex!important; /* Alineacion de los 4 bloques horizontalmente */
+    justify-content: space-around!important; /*distancia entre bloques*/
+    align-items: center; /* Alineacion centrada verticalmente*/
+    box-sizing: border-box; /* tamano del contenedor  */
+    background-color: rgb(200, 200, 200); /* fondo  */
+    opacity: 0.95; /*  transparencia del header */
+    box-shadow: 0 5px 5px #696969;/* sombra del header  */
+    z-index: 2!important;
+}
+
+.menu{
+   /* border: 2px solid black;*/
+	padding: 25px;
+	margin: 0;
+    cursor: pointer;
+    background-color: rgb(200, 200, 200); /* fondo  */
+}
+
+.logo{
+    /*border: 2px solid black;*/
+    width: 80%;
+    justify-content: left;
+    background-color: rgb(200, 200, 200); /* fondo  */
+
+}*
+header ul{
+    background-color: rgb(200, 200, 200); /* fondo  */
+    /*border: 2px solid black;*/
+    display: flex!important;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 10px 0 0 0;
+}
+
+header ul li{
+    list-style: none!important;
+    padding: 10px;
+    margin: 0px 2rem;
+    font-weight: bold;
+}
+
+
+/*carrito*/
+.cart{
+    /*border: 2px solid black;*/
+    position: relative;
+    height: 50px;
+    cursor: pointer;
+}
+.cart box-icon{
+    height: 100%;
+    display: flex;    
+}
+
+.cart span{
+    position: relative!important;
+    top: -1rem;
+    right: -1rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    padding: 0.1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+
+/*----------------INICIO-------------------*/
+
+
+.inicio{
+    background-color: darkred;
+    box-sizing: border-box;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 50px 0 0 0;
+    padding: 10px 0px;
+}
+.inicio h1{
+    font-size: 2rem;
+    color:white;
+    margin:0px 5px;
+}
+.inicio img{
+    width: 100%;
+}
+
+.container-fluid{
+    position: static!important;
+    z-index: -1!important;
+    padding-top: 100px;
+
+
+}
+
+/*----------- PRODUCTOS ------------*/
+.produ{
+    box-sizing: border-box;
+    background-color: #1a202c;
+    color: white;
+    font-size: 3rem;
+    align-items: center;
+    padding: 2rem;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.productos{
+    border: red;
+    min-width: 100%;
+    justify-content: center;
+    margin: 0 0vw;
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 3rem 1rem;
+    box-sizing: border-box!important;
+    position: static!important;
+} 
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.1);
+    border: 6px solid transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.producto:hover{
+    border: 3px solid darkblue;
+    ;
+}
+.producto__img img{
+    width: 150px;
+    min-height: 250px;
+    max-height: 250px;
+}
+.producto__footer{
+    padding: 1rem;
+}
+.producto__footer h1{
+    text-align: justify;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1a202c;
+    font-family: Helvetica, sans-serif;
+    min-height: 2.0em;
+}
+.producto__footer p{
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.555);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.producto__footer .price{
+    font-size: 2rem;
+    color: #1a202c;
+    text-align: end;
+}
+.productos .bottom{
+    width: 100%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem 2rem;
+}
+.bottom .btn{
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.bottom button{
+    background-color: #3033d3;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.0rem;
+    color: white;
+    font-weight: 600;
+}
+.bottom div{
+    background-color:  rgb(200, 200, 200);
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin-left: -2rem;
+    border-radius: 5px;
+}
+.bottom div a{
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+}
+.bottom div a:hover{
+    color: white;
+}
+/*-----------------CARRITO -----------*/
+.carritos{
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100vw;
+    width: 100vw;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 2;
+    padding-bottom: 5rem;
+    visibility: hidden;
+}
+.carrito{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.5);
+    width: 50%;
+    height: 80%;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: scroll;
+    transition: all 300ms ease-in-out;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+.carrito h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.carritos.show{
+    visibility: visible;
+}
+
+.carrito.show{
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+    visibility: visible;
+}
+.carrito__close box-icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transform: all 300ms ease-in-out;
+    margin: 0.5rem 0 0 2rem
+}
+.carrito__close box-icon:hover {
+    fill: crimson;
+}
+.carrito__center{
+    width: 100%;
+    margin: 0 auto;
+}
+.carrito__item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: 0 1px 10px saddlebrown;
+    border-radius: 5px;
+}
+.carrito__item div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrito__item img{
+    width: 7em;
+    max-height: 9rem;
+}
+.carrito__item h3{
+    margin: 1.5rem 0 0 1rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.carrito__item .price{
+    color: #1a202c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: end;
+    margin-left: -10rem ;
+    margin: auto;
+}
+.carrito__item box-icon{
+    fill:  rgb(200, 200, 200);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    flex: 30%;
+}
+.carrito__item .cantidad{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    flex: 40%;
+}
+.carrito__item .remove__item box-icon{
+    width: 50px;
+    height: 50px;
+    fill:  crimson;
+}
+.carrito__footer{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.carrito__footer h3{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.carrito__footer .btn{
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: #08a05c;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.carrito__footer .btn:hover{
+    background-color: #0f5c39;
+    color: white;
+}
+/*--------------DETALLES --------------*/
+.detalles{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 13rem 1rem 0 1rem;
+    box-sizing: border-box;
+}
+.detalles h2{
+    font-size: 3.5rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family:Helvetica, sans-serif;
+    color: #1a202c;
+}
+.detalles .price{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #08a05c;
+}
+.detalles button{
+    max-width: 300px;
+    margin: 1rem 0 0 0;
+    padding: 1rem 1rem;
+    border: none;
+    outline: 0;
+    background-color: #3033d3;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.detalles .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
+    max-width: 350px;
+}
+.detalles .grid > .nuevo, .tamano{
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+   
+}
+.detalles .grid .nuevo{
+    background-color:#08a05c;
+    
+}
+.detalles .grid .tamano{
+    background-color:#f1365b;
+    display: flex;
+}
+.detalles .grid .tamano select{
+    border: none;
+    outline: 0;
+    font-size: 2rem;
+    background-color:#f1365b;
+    color: white;
+    cursor: pointer;
+}
+.detalles img{
+    width: 500px;
+    max-height: 600px;
+    object-fit: contain;
+    margin-top:  -7rem;
+    z-index: -1;
+    margin: auto;
+}
+.detalles input{
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.detalles .description{
+    font-size: 1.3rem;
+    max-width: 1300px;
+    width: 90%;
+    letter-spacing: 1px;
+    color: #5f5d5d;
+    margin: 30px auto;
+    font-weight: 500;
+}
+.detalles .description b{
+    font-size: 1.4rem;
+    color: #30333a;
+}
+
+
+
+/* ------------- RELACIONADO --------- */
+.relacionados{
+    text-align: center;
+    background-color: #2e2e2e;
+    color: white;
+    max-width: 350px;
+    width: 100%;
+    margin: 5rem auto -2rem auto;
+    padding: .5rem 1rem;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif
+    ;
+}
+
+
+/* -------------MEDIA -------------*/
+@media only screen and (max-width: 1000px){
+    .carrito__item{
+        width: 92%;
+    }
+}
+@media only screen and (max-width: 888px){ 
+    .detalles input{
+        margin-top: -6rem;
+    }
+}
+@media only screen and (max-width: 700px){
+    .carrito{
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+    .carrito__item h3{
+        font-size: 1.3rem;
+    }
+    .carrito__item .price{
+        margin: auto;
+    }
+    .detalles h2{
+        font-size: 3rem;
+    }
+    
+}
+@media only screen and (max-width: 663px){ 
+    .detalles input{
+        margin-top: -8rem;
+    }
+}
+
+@media only screen and (max-width: 570px){
+    header ul{
+        display: none;
+    }
+    .productos{
+        padding: 0;
+    }
+    .carrito__item .price{
+        margin: auto;
+    }
+    .detalles h2{
+        font-size: 2.5rem;
+    }
+    .detalles input{
+        margin-top: 0rem ;
+    }
+    .detalles img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        margin: -1rem auto;
+    }
+}
+@media only screen and (max-width: 450px){
+    .carrito__item h3{
+        font-size: .8rem;
+    }
+    .carrito__item .remove__item{
+    width: 15px;
+    height: 15px;
+    }
+    .carrito__item .price{
+        margin: auto;
+    }
+    .carrito__item box-icon{
+    width: 15px;
+    height: 15px;
+    }
+    .detalles h2{
+        font-size:2rem;
+        padding-top: 10rem ;
+    }
+    .detalles .grid > .nuevo, .tamano{
+    padding: 1rem 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    }
+    .detalles .grid .tamano select{
+        font-size: 1.2rem;
+    }
+    .detalles img{
+        width: 300px;
+        width: 100%;
+    }
+    .detalles{
+        padding: 1rem 0;
+    }
+}
+
+
+.alert-warning {
+    box-sizing: content-box!important;
+    width: 77vw!important;
+    max-width: 77vw!important;
+    position: fixed!important;
+    margin: 0 0 0 -15px!important;
+    bottom: 0!important;
+    justify-content: center!important;
+    opacity: 0.6;
+
+
 }
