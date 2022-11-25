@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thehackermark/static/css/main.b39c127b.css",
-    "main.js": "/thehackermark/static/js/main.83a5e63d.js",
+    "main.css": "/thehackermark/static/css/main.4002f8c1.css",
+    "main.js": "/thehackermark/static/js/main.47d4d34e.js",
     "static/js/787.dd8fa7c6.chunk.js": "/thehackermark/static/js/787.dd8fa7c6.chunk.js",
     "static/media/roboto-all-500-normal.woff": "/thehackermark/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/thehackermark/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
@@ -38,12 +38,12 @@
     "static/media/roboto-greek-ext-300-normal.woff2": "/thehackermark/static/media/roboto-greek-ext-300-normal.35b9d6be04b95f0f0530.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/thehackermark/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "/thehackermark/index.html",
-    "main.b39c127b.css.map": "/thehackermark/static/css/main.b39c127b.css.map",
-    "main.83a5e63d.js.map": "/thehackermark/static/js/main.83a5e63d.js.map",
+    "main.4002f8c1.css.map": "/thehackermark/static/css/main.4002f8c1.css.map",
+    "main.47d4d34e.js.map": "/thehackermark/static/js/main.47d4d34e.js.map",
     "787.dd8fa7c6.chunk.js.map": "/thehackermark/static/js/787.dd8fa7c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b39c127b.css",
-    "static/js/main.83a5e63d.js"
+    "static/css/main.4002f8c1.css",
+    "static/js/main.47d4d34e.js"
   ]
 }
